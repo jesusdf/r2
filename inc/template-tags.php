@@ -128,7 +128,7 @@ function f2_posted_on() {
 		$output .= ' <span class="author vcard"><a class="url fn n" href="'.esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ).'" title="'.esc_attr( sprintf( __( 'View all posts by %s', 'f2' ), get_the_author() ) ).'" rel="author">'.esc_html( get_the_author() ).'</a></span> ';
 		$output .= __('on', 'f2').' ';
 	}
-	$output .= sprintf( '<a href="%1$s" title="" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a>',
+	$output .= sprintf( '<a href="%1$s" title="" rel="bookmark"><time class="entry-date updated" datetime="%2$s">%3$s</time></a>',
 		esc_url( get_permalink() ),
 		esc_attr( get_the_date( 'c' ) ),
 		get_the_time(__('j F Y, g:i a', 'f2'))
