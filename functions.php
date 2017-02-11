@@ -134,7 +134,7 @@ function f2_enqueue_webfonts() {
 		'family' => implode( '|', $font_families ),
 	);
 	*/
-	wp_enqueue_style( 'webfonts', add_query_arg( $query_args, get_template_directory_uri() . '/fonts/fonts.css' ), array(), null );
+	wp_enqueue_style( 'webfonts', get_template_directory_uri() . '/fonts/fonts.css', array(), null );
 }
 
 
@@ -280,6 +280,6 @@ endif; /* function f2_excerpt_more */
     add_filter( 'style_loader_src', 'url_remove_wp_version_strings' );
     function url_remove_wp_version_strings( $src ) {   global $wp_version;
         parse_str(parse_url($src, PHP_URL_QUERY), $query);
-        if ( !empty($query['ver']) && ($query['ver'] === $wp_version || $query['ver'] == $wp_version) ) { $src = remove_query_arg('ver', $src); }   return $src;
+        if ( !empty($query['ver']) ) { $src = remove_query_arg('ver', $src); }   return $src;
     }
 // ========================================================== //
