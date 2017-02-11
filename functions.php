@@ -125,6 +125,7 @@ add_action( 'widgets_init', 'f2_widgets_init' );
  * @since F2 2.2.1
  */
 function f2_enqueue_webfonts() {
+	/*
 	$font_families[] = 'Bitter:700';
 	$font_families[] = 'Gudea:400,700,400italic';
 
@@ -132,7 +133,8 @@ function f2_enqueue_webfonts() {
 	$query_args = array(
 		'family' => implode( '|', $font_families ),
 	);
-	wp_enqueue_style( 'webfonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
+	*/
+	wp_enqueue_style( 'webfonts', add_query_arg( $query_args, get_template_directory_uri() . '/fonts/fonts.css' ), array(), null );
 }
 
 
@@ -146,20 +148,20 @@ function f2_scripts() {
 		f2_enqueue_webfonts();
 	}
 
-	wp_enqueue_style( 'style', get_stylesheet_uri(), false, $theme->Version, 'screen, projection' );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), false, $theme->Version, 'screen' );
 
 	/* Load the non-responsive stylesheet when the non_responsive option is turned on */
 	if( f2_get_option('non_responsive') == 'on' ) {
-		wp_enqueue_style( 'non-responsive', get_template_directory_uri() . '/non-responsive.css', false, $theme->Version, 'screen, projection'  );
+		wp_enqueue_style( 'non-responsive', get_template_directory_uri() . '/non-responsive.css', false, $theme->Version, 'screen'  );
 	}
 
 	wp_enqueue_style( 'print', get_template_directory_uri() . '/print.css', false, $theme->Version, 'print'  );
 
-	wp_register_style( 'ie-style', get_template_directory_uri() . '/ie.css', false, $theme->Version, 'screen, projection' );
+	wp_register_style( 'ie-style', get_template_directory_uri() . '/ie.css', false, $theme->Version, 'screen' );
 	$GLOBALS['wp_styles']->add_data( 'ie-style', 'conditional', 'lt IE 9' );
 	wp_enqueue_style( 'ie-style' );
 
-	wp_register_style( 'ie7-style', get_template_directory_uri() . '/ie7.css', false, $theme->Version, 'screen, projection' );
+	wp_register_style( 'ie7-style', get_template_directory_uri() . '/ie7.css', false, $theme->Version, 'screen' );
 	$GLOBALS['wp_styles']->add_data( 'ie7-style', 'conditional', 'lt IE 8' );
 	wp_enqueue_style( 'ie7-style' );
 

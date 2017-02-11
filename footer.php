@@ -11,7 +11,7 @@
 
 	</div><!-- #main .site-main -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<?php f2_footer_text(); ?>
 		</div>
