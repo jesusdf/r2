@@ -2,8 +2,8 @@
 /**
  * The Sidebars containing widget areas.
  *
- * @package F2
- * @since F2 2.0
+ * @package r2
+ * @since r2 3.0
  */
 
 $options = f2_get_theme_options();

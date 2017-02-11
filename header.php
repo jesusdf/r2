@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package F2
- * @since F2 2.0
+ * @package r2
+ * @since r2 3.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> dir="ltr">

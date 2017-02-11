@@ -2,8 +2,8 @@
 /**
  * F2 Theme Options
  *
- * @package F2
- * @since F2 2.0
+ * @package r2
+ * @since r2 3.0
  */
 
 /**
@@ -15,7 +15,7 @@
  * which is used when the option is saved, to ensure that our option values are properly
  * formatted, and safe.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 
 
@@ -92,7 +92,7 @@ add_filter( 'option_page_capability_f2_options', 'f2_option_page_capability' );
  *
  * This function is attached to the admin_menu action hook.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_theme_options_add_page() {
 	$theme_page = add_theme_page(
@@ -110,7 +110,7 @@ add_action( 'admin_menu', 'f2_theme_options_add_page' );
 /**
  * Returns an array of color schemes for F2.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_color_scheme_options() {
 	$color_scheme_options = array(
@@ -128,7 +128,7 @@ function f2_color_scheme_options() {
 /**
  * Returns an array of layouts for F2.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_layout_options() {
 	$layout_options = array(
@@ -146,7 +146,7 @@ function f2_layout_options() {
 /**
  * Returns an array of sidebar widths for F2.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_sidebar_width_options() {
 	$sidebar_width_options = array(
@@ -163,7 +163,7 @@ function f2_sidebar_width_options() {
 /**
  * Returns an array of font sizes for F2.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_font_size_options() {
 	$font_size_options = array(
@@ -184,7 +184,7 @@ function f2_font_size_options() {
  * If the parameter `$option` (string) is passed, the return value will be the corresponding default value
  * If no parameter is passed, the return value is an array containing default values for all options
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_default_theme_options($option = '') {
 	$defaults = array(
@@ -216,7 +216,7 @@ function f2_default_theme_options($option = '') {
 /**
  * Returns the options array for F2.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_get_theme_options() {
 	$saved = (array) get_option( 'f2_theme_options' );
@@ -232,7 +232,7 @@ function f2_get_theme_options() {
 /**
  * Renders the color scheme option.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_settings_field_color_scheme() {
 	$options = f2_get_theme_options();
@@ -254,7 +254,7 @@ function f2_settings_field_color_scheme() {
 /**
  * Renders the site logo image upload form.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_settings_field_logo_image() {
 	$options = f2_get_theme_options();
@@ -272,7 +272,7 @@ function f2_settings_field_logo_image() {
 /**
  * Renders the header image upload form.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_settings_field_header_image() {
 	$options = f2_get_theme_options();
@@ -300,7 +300,7 @@ function f2_settings_field_hide_header_nav() {
 /**
  * Renders the layout options setting field.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_settings_field_layout() {
 	$options = f2_get_theme_options();
@@ -322,7 +322,7 @@ function f2_settings_field_layout() {
 /**
  * Renders the sidebar width setting field.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_settings_field_sidebar_width() {
 	$options = f2_get_theme_options();
@@ -344,7 +344,7 @@ function f2_settings_field_sidebar_width() {
 /**
  * Renders the sidebar font size setting field.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_settings_field_sidebar_font_size() {
 	$options = f2_get_theme_options();
@@ -364,7 +364,7 @@ function f2_settings_field_sidebar_font_size() {
 /**
  * Renders the content font size setting field.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_settings_field_content_font_size() {
 	$options = f2_get_theme_options();
@@ -447,7 +447,7 @@ function f2_settings_field_footer_text() {
 /**
  * Renders the 'disable-webfonts' setting field.
  *
- * @since F2 2.1
+ * @since r2 3.0
  */
 
 function f2_settings_field_disable_webfonts() {
@@ -463,7 +463,7 @@ function f2_settings_field_disable_webfonts() {
 /**
  * Renders the 'non-responsive' setting field.
  *
- * @since F2 2.2
+ * @since r2 3.0
  */
 
 function f2_settings_field_non_responsive() {
@@ -506,7 +506,7 @@ function f2_settings_field_hide_footer_credits() {
 /**
  * Renders the Theme Options administration screen.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_theme_options_render_page() {
 	?>
@@ -536,7 +536,7 @@ function f2_theme_options_render_page() {
 /**
  * Sanitize color scheme value
  *
- * @since F2 2.2.3
+ * @since r2 3.0
  */
 function f2_sanitize_color_scheme( $value ) {
 	if( array_key_exists( $value, f2_color_scheme_options() ) ) {
@@ -550,7 +550,7 @@ function f2_sanitize_color_scheme( $value ) {
 /**
  * Sanitize layout value
  *
- * @since F2 2.2.3
+ * @since r2 3.0
  */
 function f2_sanitize_layout( $value ) {
 	if( array_key_exists( $value, f2_layout_options() ) ) {
@@ -564,7 +564,7 @@ function f2_sanitize_layout( $value ) {
 /**
  * Sanitize sidebar width value
  *
- * @since F2 2.2.3
+ * @since r2 3.0
  */
 function f2_sanitize_sidebar_width( $value ) {
 	if( array_key_exists( $value, f2_sidebar_width_options() ) ) {
@@ -578,7 +578,7 @@ function f2_sanitize_sidebar_width( $value ) {
 /**
  * Sanitize font size value
  *
- * @since F2 2.2.3
+ * @since r2 3.0
  */
 function f2_sanitize_font_size( $value ) {
 	if( array_key_exists( $value, f2_font_size_options() ) ) {
@@ -598,7 +598,7 @@ function f2_sanitize_font_size( $value ) {
  * @param array $input Unknown values.
  * @return array Sanitized theme options ready to be stored in the database.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_theme_options_validate( $input ) {
 	$output = array();
@@ -678,7 +678,7 @@ function f2_theme_options_validate( $input ) {
 /**
  * Registers the settings available for wp_customizer
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 
 function f2_customize_register( $wp_customize ) {
@@ -869,7 +869,7 @@ if (isset($_GET['page']) && $_GET['page'] == 'theme_options') {
 
 /**
  * Add Theme Options menu item to Admin Bar.
- * @since F2 2.2
+ * @since r2 3.0
  */
 function f2_adminbar() {
 	

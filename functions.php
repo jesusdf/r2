@@ -2,14 +2,14 @@
 /**
  * F2 functions and definitions
  *
- * @package F2
- * @since F2 2.0
+ * @package r2
+ * @since r2 3.0
  */
 
 /**
  * Setting the content width based on the theme's design and stylesheet.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 if ( ! isset( $content_width ) )
 	$content_width = 730; /* pixels */
@@ -22,7 +22,7 @@ if ( ! function_exists( 'f2_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_setup() {
 
@@ -84,7 +84,7 @@ add_action( 'after_setup_theme', 'f2_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets
  *
- * @since F2 1.0
+ * @since r2 3.0
  */
 function f2_widgets_init() {
 
@@ -122,7 +122,7 @@ add_action( 'widgets_init', 'f2_widgets_init' );
 /**
  * Enqueue webfonts
  *
- * @since F2 2.2.1
+ * @since r2 3.0
  */
 function f2_enqueue_webfonts() {
 	/*
@@ -202,7 +202,7 @@ add_action( 'wp_head', 'f2_head');
 /**
  * Adds custom classes to the array of body classes.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_body_class( $classes ) {
 	$options = f2_get_theme_options();
@@ -233,7 +233,7 @@ add_filter( 'body_class', 'f2_body_class' );
 /**
  * Adds custom classes to the array of post classes.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_post_class( $classes ) {
 	if( has_post_thumbnail() ) // Check if the current post has a post thumbnail
@@ -246,7 +246,7 @@ add_filter( 'post_class', 'f2_post_class' );
 /**
  * Adds a 'Continue reading...' link at the end of the excrept.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 if ( ! function_exists( 'f2_excerpt_more' ) ):
 function f2_excerpt_more( $more ) {

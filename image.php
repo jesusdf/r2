@@ -2,8 +2,8 @@
 /**
  * The template for displaying image attachments.
  *
- * @package F2
- * @since F2 2.0
+ * @package r2
+ * @since r2 3.0
  */
 
 get_header();

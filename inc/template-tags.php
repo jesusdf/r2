@@ -3,15 +3,15 @@
  * Custom template tags for this theme.
  *
  *
- * @package F2
- * @since F2 2.0
+ * @package r2
+ * @since r2 3.0
  */
 
 if ( ! function_exists( 'f2_content_nav' ) ):
 /**
  * Display navigation to next/previous pages when applicable
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_content_nav( $nav_id ) {
 	global $wp_query, $post;
@@ -65,7 +65,7 @@ if ( ! function_exists( 'f2_comment' ) ) :
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
@@ -119,7 +119,7 @@ if ( ! function_exists( 'f2_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_posted_on() {
 	$output = '';
@@ -140,7 +140,7 @@ endif;
 /**
  * Returns true if a blog has more than 1 category
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
@@ -167,7 +167,7 @@ function f2_categorized_blog() {
 /**
  * Flush out the transients used in f2_categorized_blog
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_category_transient_flusher() {
 	// Like, beat it. Dig?
@@ -180,7 +180,7 @@ add_action( 'save_post', 'f2_category_transient_flusher' );
 /**
  * Gets the option name as a string and returns the current value for the option
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_get_option($option) {
 	$options = f2_get_theme_options();
@@ -193,7 +193,7 @@ if ( ! function_exists( 'f2_header_image' ) ) :
 /**
  * Renders the header image if a header image is specified in the options
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_header_image() {
 	if( ( $header_image = f2_get_option('header_image') ) && $header_image != 'remove-header' ) {
@@ -207,7 +207,7 @@ if ( ! function_exists( 'f2_logo_image' ) ) :
 /**
  * Renders the logo image if a header image is specified in the options
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_logo_image() {
 	if( $logo_image = f2_get_option('logo_image') ) {
@@ -220,7 +220,7 @@ endif; // ends check for f2_logo_image()
 /**
  * Footer text
  *
- * @since F2 2.0
+ * @since r2 3.0
  */
 function f2_footer_text() {
 	if( $footer_text = stripslashes( f2_get_option( 'footer_text' ) ) )

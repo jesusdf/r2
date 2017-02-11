@@ -7,8 +7,8 @@
  * handled by a callback to f2_comment() which is
  * located in the functions.php file.
  *
- * @package F2
- * @since F2 2.0
+ * @package r2
+ * @since r2 3.0
  */
 ?>
 
