@@ -7,7 +7,7 @@
  * @package r2
  * @since r2 3.0
  */
-?><!DOCTYPE html>
+?><?php include_once('amp-redirect.php'); ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> dir="ltr">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
