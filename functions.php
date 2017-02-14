@@ -76,6 +76,11 @@ function f2_setup() {
 	 * Add support for the Aside Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', ) );
+
+	if( f2_get_option('clear_version_strings') == 'on' ) {
+		include_once "clear-version-parameters.php";
+	}
+
 }
 endif; // f2_setup
 add_action( 'after_setup_theme', 'f2_setup' );
@@ -255,8 +260,5 @@ function f2_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'f2_excerpt_more');
 endif; /* function f2_excerpt_more */
-
-
-include_once "clear-version-parameters.php";
 
 ?>

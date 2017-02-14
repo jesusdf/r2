@@ -308,7 +308,7 @@ cite.fn, .comment-meta { position: absolute; top: 10px; top: 1rem; left: 63px; }
 #reply-title small { font-family: "Gudea", sans-serif; font-weight: normal; }
 
 .comment-form-author, .comment-form-email, .comment-form-url { position: relative; }
-.comment-form-author input, .comment-form-email input, .comment-form-url input { position: absolute; left: 4em; max-width: 75%; }
+.comment-form-author input, .comment-form-email input, .comment-form-url input { position: absolute; left: 10em; max-width: 75%; }
 
 /* = Sidebars & Widgets
 ----------------------------------------------- */

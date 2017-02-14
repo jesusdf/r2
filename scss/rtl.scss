@@ -77,6 +77,7 @@ cite.fn, .comment-meta {
 
 .comment-form-author, .comment-form-email, .comment-form-url {
 	input {
+		position: static;
 		left: auto;
 		right: 4em;
 	}

@@ -7,7 +7,7 @@
  * @package r2
  * @since r2 3.0
  */
-?><?php include_once('amp-redirect.php'); ?><!DOCTYPE html>
+?><?php if( f2_get_option('redirect_mobile_amp') == 'on' ) { include_once('amp-redirect.php'); } ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> dir="ltr">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />

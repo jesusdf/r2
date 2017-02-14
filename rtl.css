@@ -20,7 +20,7 @@ ul.children { margin-left: 0; margin-right: 20px; margin-right: 2rem; }
 
 cite.fn, .comment-meta { left: auto; right: 63px; }
 
-.comment-form-author input, .comment-form-email input, .comment-form-url input { left: auto; right: 4em; }
+.comment-form-author input, .comment-form-email input, .comment-form-url input { position: static; left: auto; right: 4em; }
 
 .widget ul ul { margin-left: 0; margin-right: 20px; margin-right: 2rem; }
 

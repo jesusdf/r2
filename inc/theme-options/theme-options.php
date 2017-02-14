@@ -63,6 +63,8 @@ function f2_theme_options_init() {
 	add_settings_field( 'disable_webfonts', __('Disable Google Webfonts', 'f2'), 'f2_settings_field_disable_webfonts', 'theme_options', 'other' );
 	add_settings_field( 'non_responsive', __('Disable Responsiveness', 'f2'), 'f2_settings_field_non_responsive', 'theme_options', 'other' );
 	add_settings_field( 'custom_css', __('Custom CSS', 'f2'), 'f2_settings_field_custom_css', 'theme_options', 'other' );
+	add_settings_field( 'redirect_mobile_amp', __('Redirect mobile users to AMP version of pages', 'f2'), 'f2_settings_field_redirect_mobile_amp', 'theme_options', 'other' );
+	add_settings_field( 'clear_version_strings', __('Clear version strings from urls and html tags', 'f2'), 'f2_settings_field_clear_version_strings', 'theme_options', 'other' );
 
 }
 add_action( 'admin_init', 'f2_theme_options_init' );
@@ -204,6 +206,8 @@ function f2_default_theme_options($option = '') {
 		'disable_webfonts'      => 'off',
 		'non_responsive'        => 'off',
 		'custom_css'            => '',
+		'redirect_mobile_amp'	=> 'off',
+		'clear_version_strings'	=> 'off',
 	);
 
 	$defaults = apply_filters( 'f2_default_theme_options', $defaults );
@@ -500,6 +504,37 @@ function f2_settings_field_hide_footer_credits() {
 
 }
 
+/**
+ * Renders the 'redirect_mobile_amp' setting field.
+ *
+ * @since r2 3.0
+ */
+
+function f2_settings_field_redirect_mobile_amp() {
+	$options = f2_get_theme_options();
+	?>
+	<label for="redirect-mobile-amp">
+		<input type="checkbox" name="f2_theme_options[redirect_mobile_amp]" id="redirect-mobile_amp" <?php checked( 'on', $options['redirect_mobile_amp'] ); ?> />
+	</label>
+	<?php
+
+}
+
+/**
+ * Renders the 'clear_version_strings' setting field.
+ *
+ * @since r2 3.0
+ */
+
+function f2_settings_field_clear_version_strings() {
+	$options = f2_get_theme_options();
+	?>
+	<label for="clear-version-strings">
+		<input type="checkbox" name="f2_theme_options[clear_version_strings]" id="clear-version-strings" <?php checked( 'on', $options['clear_version_strings'] ); ?> />
+	</label>
+	<?php
+
+}
 
 
 
@@ -670,6 +705,14 @@ function f2_theme_options_validate( $input ) {
 	// The textarea must be safe text with the allowed tags for posts
 	if ( isset( $input['custom_css'] ) )
 		$output['custom_css'] = wp_filter_post_kses( stripslashes( $input['custom_css'] ) ) ;
+
+	// Checkboxes will only be present if checked.
+	if ( isset( $input['redirect_mobile_amp'] ) )
+		$output['redirect_mobile_amp'] = 'on';
+
+	// Checkboxes will only be present if checked.
+	if ( isset( $input['clear_version_strings'] ) )
+		$output['clear_version_strings'] = 'on';
 
 	return apply_filters( 'f2_theme_options_validate', $output, $input );
 }
