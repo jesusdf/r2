@@ -251,7 +251,7 @@ add_filter( 'post_class', 'f2_post_class' );
 if ( ! function_exists( 'f2_excerpt_more' ) ):
 function f2_excerpt_more( $more ) {
 	global $post;
-	return ' ...</p><p><a href="'. get_permalink($post->ID) .'" class="more-link">'. sprintf(__('Continue reading &lsquo;%s&rsquo; &raquo;', 'f2'), the_title('', '', false)) .'</a>';
+	return ' ...</p><p><a href="'. get_permalink($post->ID) .'" class="more-link">' . the_content(__('Read more &raquo;', 'f2')) .'</a>';
 }
 add_filter('excerpt_more', 'f2_excerpt_more');
 endif; /* function f2_excerpt_more */

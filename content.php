@@ -43,7 +43,7 @@
 				</a>
 			</div>
 			<?php endif; ?>
-			<?php the_content( sprintf(__('Continue reading &lsquo;%s&rsquo; &raquo;', 'f2'), the_title('', '', false)) ); ?>
+			<?php the_content(__('Read more &raquo;', 'f2')); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'f2' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 	

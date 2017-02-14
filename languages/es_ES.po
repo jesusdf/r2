@@ -369,6 +369,24 @@ msgstr "Artículo fijado"
 msgid "Continue reading ‘%s’ »"
 msgstr "Continuar leyendo ‘%s’ »"
 
+#: /index.php:19
+#: /archive.php:46
+#, php-format
+msgid "Read more »"
+msgstr "Leer más »"
+
+#: /index.php:19
+#: /archive.php:46
+#, php-format
+msgid "Continue reading ‘%s’ &raquo;"
+msgstr "Continuar leyendo ‘%s’ &raquo;"
+
+#: /index.php:19
+#: /archive.php:46
+#, php-format
+msgid "Read more &raquo;"
+msgstr "Leer más &raquo;"
+
 #: /index.php:25
 #: /image.php:29
 #: /archive.php:56
