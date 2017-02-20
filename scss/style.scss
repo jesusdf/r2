@@ -4,7 +4,7 @@ Theme URI: https://github.com/jesusdf/r2/
 Author: Jesus DF
 Author URI: http://reprogramador.es
 Description: A fork from F2 theme by Srini G http://srinig.com/
-Version: 3.0.2
+Version: 3.0.3
 License: GNU General Public License
 License URI: https://wordpress.org/about/gpl/
 GitHub Theme URI: https://github.com/jesusdf/r2
@@ -39,6 +39,10 @@ and Blueprint http://www.blueprintcss.org/
 /* =Color Schemes
 ------------------------------------------------ */
 
+@import "black";
 @import "brown";
-@import "green";
+@import "carbon";
 @import "dark";
+@import "green";
+@import "grey";
+@import "purple";

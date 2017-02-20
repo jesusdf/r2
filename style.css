@@ -4,7 +4,7 @@ Theme URI: https://github.com/jesusdf/r2/
 Author: Jesus DF
 Author URI: http://reprogramador.es
 Description: A fork from F2 theme by Srini G http://srinig.com/
-Version: 3.0.2
+Version: 3.0.3
 License: GNU General Public License
 License URI: https://wordpress.org/about/gpl/
 GitHub Theme URI: https://github.com/jesusdf/r2
@@ -430,6 +430,24 @@ body { padding: 10px; padding: 1rem; }
   .wide-sidebar.two-sidebars #sidebar-2 { float: right; margin-right: -34rem; padding-top: 2rem; border-bottom-right-radius: 0; border-bottom-left-radius: 0.5rem; -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem; box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem; } }
 /* =Color Schemes
 ------------------------------------------------ */
+/* Color Sceme: Black */
+.color-scheme-black { background-color: #333333; }
+.color-scheme-black a, .color-scheme-black .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-black .menu-toggle { color: #333333; }
+.color-scheme-black a:visited, .color-scheme-black .site-header .site-navigation .menu-toggle:visited, .site-header .site-navigation .color-scheme-black .menu-toggle:visited { color: #3d3d3d; }
+.color-scheme-black blockquote, .color-scheme-black pre, .color-scheme-black th, .color-scheme-black code, .color-scheme-black kbd, .color-scheme-black tt, .color-scheme-black var, .color-scheme-black .wp-caption, .color-scheme-black .entry-attachment, .color-scheme-black .paging-navigation, .color-scheme-black .post-navigation, .color-scheme-black #image-navigation, .color-scheme-black .page-header { background-color: #f0f0f0; }
+.color-scheme-black blockquote, .color-scheme-black table, .color-scheme-black th, .color-scheme-black td .wp-caption, .color-scheme-black .entry-attachment, .color-scheme-black .wp-caption img, .color-scheme-black .entry-attachment img, .color-scheme-black.blog .format-aside, .color-scheme-black.archive .format-aside, .color-scheme-black .hentry, .color-scheme-black .paging-navigation, .color-scheme-black .post-navigation, .color-scheme-black #image-navigation, .color-scheme-black .page-header { border-color: #444444; }
+.color-scheme-black .site-header { background-color: #111111; }
+.color-scheme-black .site-header .site-branding .site-title a, .color-scheme-black .site-header .site-branding .site-title .site-navigation .menu-toggle, .color-scheme-black .site-header .site-navigation .site-branding .site-title .menu-toggle { color: #d0d0d0; }
+.color-scheme-black .site-header .site-navigation a, .color-scheme-black .site-header .site-navigation .menu-toggle, .color-scheme-black .site-header .site-navigation .menu-toggle { background-color: #414141; border-color: #353535; color: #eeeeee; }
+.color-scheme-black .site-header .site-navigation a:hover, .color-scheme-black .site-header .site-navigation .menu-toggle:hover, .color-scheme-black .site-header .site-navigation .menu-toggle:hover { background-color: #353535; }
+.color-scheme-black #header-image { background-color: #f0f0f0; }
+.color-scheme-black .sidebar { background-color: #f0f0f0; }
+.color-scheme-black #main { background-color: #fefefe; border: none; }
+.color-scheme-black .comments-area article, .color-scheme-black .comments-area .pingback, .color-scheme-black .comments-area .pingback { background-color: whitesmoke; border-color: #f0f0f0; }
+.color-scheme-black .comments-area .bypostauthor article, .color-scheme-black .comments-area .bypostauthor .pingback { border-color: #bdbdbd; }
+.color-scheme-black .site-footer { background-color: black; }
+.color-scheme-black .site-footer a, .color-scheme-black .site-footer .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-black .site-footer .menu-toggle { color: #eeeeee; }
+
 /* Color Scheme: Brown */
 .color-scheme-brown { background-color: #d1bd9d; color: #413a35; }
 .color-scheme-brown a, .color-scheme-brown .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-brown .menu-toggle { color: #8e5f2d; }
@@ -449,23 +467,27 @@ body { padding: 10px; padding: 1rem; }
 .color-scheme-brown .site-footer { background: #3d2814; }
 .color-scheme-brown .site-footer a, .color-scheme-brown .site-footer .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-brown .site-footer .menu-toggle { color: #a9947b; }
 
-/* Color Sceme: Green */
-.color-scheme-green { background-color: #2f362d; }
-.color-scheme-green a, .color-scheme-green .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-green .menu-toggle { color: #366d55; }
-.color-scheme-green a:visited, .color-scheme-green .site-header .site-navigation .menu-toggle:visited, .site-header .site-navigation .color-scheme-green .menu-toggle:visited { color: #3d7b60; }
-.color-scheme-green blockquote, .color-scheme-green pre, .color-scheme-green th, .color-scheme-green code, .color-scheme-green kbd, .color-scheme-green tt, .color-scheme-green var, .color-scheme-green .wp-caption, .color-scheme-green .entry-attachment, .color-scheme-green .paging-navigation, .color-scheme-green .post-navigation, .color-scheme-green #image-navigation, .color-scheme-green .page-header { background-color: #f0f6ea; }
-.color-scheme-green blockquote, .color-scheme-green table, .color-scheme-green th, .color-scheme-green td .wp-caption, .color-scheme-green .entry-attachment, .color-scheme-green .wp-caption img, .color-scheme-green .entry-attachment img, .color-scheme-green.blog .format-aside, .color-scheme-green.archive .format-aside, .color-scheme-green .hentry, .color-scheme-green .paging-navigation, .color-scheme-green .post-navigation, .color-scheme-green #image-navigation, .color-scheme-green .page-header { border-color: #b7c7bd; }
-.color-scheme-green .site-header { background-color: #7e9a88; }
-.color-scheme-green .site-header .site-branding .site-title a, .color-scheme-green .site-header .site-branding .site-title .site-navigation .menu-toggle, .color-scheme-green .site-header .site-navigation .site-branding .site-title .menu-toggle { color: #f0ecd0; }
-.color-scheme-green .site-header .site-navigation a, .color-scheme-green .site-header .site-navigation .menu-toggle, .color-scheme-green .site-header .site-navigation .menu-toggle { background-color: #4e6456; border-color: #597262; color: #e7f1cd; }
-.color-scheme-green .site-header .site-navigation a:hover, .color-scheme-green .site-header .site-navigation .menu-toggle:hover, .color-scheme-green .site-header .site-navigation .menu-toggle:hover { background-color: #597262; }
-.color-scheme-green #header-image { background-color: #f0f6ea; }
-.color-scheme-green .sidebar { background-color: #f0f6ea; }
-.color-scheme-green #main { background-color: #fefef6; border: none; }
-.color-scheme-green .comments-area article, .color-scheme-green .comments-area .pingback, .color-scheme-green .comments-area .pingback { background-color: #f5f9f1; border-color: #f0f6ea; }
-.color-scheme-green .comments-area .bypostauthor article, .color-scheme-green .comments-area .bypostauthor .pingback { border-color: #bdd7a3; }
-.color-scheme-green .site-footer { background-color: #4e6456; }
-.color-scheme-green .site-footer a, .color-scheme-green .site-footer .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-green .site-footer .menu-toggle { color: #e7f1cd; }
+/* Color Sceme: Carbon */
+.color-scheme-carbon { background-color: #333333; }
+.color-scheme-carbon a, .color-scheme-carbon .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-carbon .menu-toggle { color: #333333; }
+.color-scheme-carbon a:visited, .color-scheme-carbon .site-header .site-navigation .menu-toggle:visited, .site-header .site-navigation .color-scheme-carbon .menu-toggle:visited { color: #3d3d3d; }
+.color-scheme-carbon blockquote, .color-scheme-carbon pre, .color-scheme-carbon th, .color-scheme-carbon code, .color-scheme-carbon kbd, .color-scheme-carbon tt, .color-scheme-carbon var, .color-scheme-carbon .wp-caption, .color-scheme-carbon .entry-attachment, .color-scheme-carbon .paging-navigation, .color-scheme-carbon .post-navigation, .color-scheme-carbon #image-navigation, .color-scheme-carbon .page-header { background-color: #f0f0f0; }
+.color-scheme-carbon blockquote, .color-scheme-carbon table, .color-scheme-carbon th, .color-scheme-carbon td .wp-caption, .color-scheme-carbon .entry-attachment, .color-scheme-carbon .wp-caption img, .color-scheme-carbon .entry-attachment img, .color-scheme-carbon.blog .format-aside, .color-scheme-carbon.archive .format-aside, .color-scheme-carbon .hentry, .color-scheme-carbon .paging-navigation, .color-scheme-carbon .post-navigation, .color-scheme-carbon #image-navigation, .color-scheme-carbon .page-header { border-color: #444444; }
+.color-scheme-carbon .site-header { /*
+background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 15px;
+*/ background-color: #202020; background-image: linear-gradient(to right, #000000, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, #000000), linear-gradient(45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), linear-gradient(45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), linear-gradient(to bottom, #080808, #202020); background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px; background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px; }
+.color-scheme-carbon .site-header .site-branding .site-title a, .color-scheme-carbon .site-header .site-branding .site-title .site-navigation .menu-toggle, .color-scheme-carbon .site-header .site-navigation .site-branding .site-title .menu-toggle { color: #d0d0d0; }
+.color-scheme-carbon .site-header .site-navigation a, .color-scheme-carbon .site-header .site-navigation .menu-toggle, .color-scheme-carbon .site-header .site-navigation .menu-toggle { background-color: #414141; border-color: #353535; color: #eeeeee; }
+.color-scheme-carbon .site-header .site-navigation a:hover, .color-scheme-carbon .site-header .site-navigation .menu-toggle:hover, .color-scheme-carbon .site-header .site-navigation .menu-toggle:hover { background-color: #353535; }
+.color-scheme-carbon #header-image { background-color: #f0f0f0; }
+.color-scheme-carbon .sidebar { background-color: #f0f0f0; }
+.color-scheme-carbon #main { background-color: #fefefe; border: none; }
+.color-scheme-carbon .comments-area article, .color-scheme-carbon .comments-area .pingback, .color-scheme-carbon .comments-area .pingback { background-color: whitesmoke; border-color: #f0f0f0; }
+.color-scheme-carbon .comments-area .bypostauthor article, .color-scheme-carbon .comments-area .bypostauthor .pingback { border-color: #bdbdbd; }
+.color-scheme-carbon .site-footer { background-color: #202020; background-image: linear-gradient(to right, #000000, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, #000000), linear-gradient(45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), linear-gradient(45deg, #000000 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #000000 75%, #000000), linear-gradient(to bottom, #080808, #202020); background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px; background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px; }
+.color-scheme-carbon .site-footer a, .color-scheme-carbon .site-footer .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-carbon .site-footer .menu-toggle { color: #eeeeee; }
 
 /* Color Scheme: Dark */
 .color-scheme-dark { background-color: #5a5245; color: #a8a8a8; }
@@ -487,3 +509,57 @@ body { padding: 10px; padding: 1rem; }
 .color-scheme-dark .avatar, .color-scheme-dark .wp-post-image { background-color: #2f2e2d; border-color: #36332e; }
 .color-scheme-dark .site-footer { background: #2f2e2d; }
 .color-scheme-dark .site-footer a, .color-scheme-dark .site-footer .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-dark .site-footer .menu-toggle { color: #c6c8c9; }
+
+/* Color Sceme: Green */
+.color-scheme-green { background-color: #2f362d; }
+.color-scheme-green a, .color-scheme-green .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-green .menu-toggle { color: #366d55; }
+.color-scheme-green a:visited, .color-scheme-green .site-header .site-navigation .menu-toggle:visited, .site-header .site-navigation .color-scheme-green .menu-toggle:visited { color: #3d7b60; }
+.color-scheme-green blockquote, .color-scheme-green pre, .color-scheme-green th, .color-scheme-green code, .color-scheme-green kbd, .color-scheme-green tt, .color-scheme-green var, .color-scheme-green .wp-caption, .color-scheme-green .entry-attachment, .color-scheme-green .paging-navigation, .color-scheme-green .post-navigation, .color-scheme-green #image-navigation, .color-scheme-green .page-header { background-color: #f0f6ea; }
+.color-scheme-green blockquote, .color-scheme-green table, .color-scheme-green th, .color-scheme-green td .wp-caption, .color-scheme-green .entry-attachment, .color-scheme-green .wp-caption img, .color-scheme-green .entry-attachment img, .color-scheme-green.blog .format-aside, .color-scheme-green.archive .format-aside, .color-scheme-green .hentry, .color-scheme-green .paging-navigation, .color-scheme-green .post-navigation, .color-scheme-green #image-navigation, .color-scheme-green .page-header { border-color: #b7c7bd; }
+.color-scheme-green .site-header { background-color: #7e9a88; }
+.color-scheme-green .site-header .site-branding .site-title a, .color-scheme-green .site-header .site-branding .site-title .site-navigation .menu-toggle, .color-scheme-green .site-header .site-navigation .site-branding .site-title .menu-toggle { color: #f0ecd0; }
+.color-scheme-green .site-header .site-navigation a, .color-scheme-green .site-header .site-navigation .menu-toggle, .color-scheme-green .site-header .site-navigation .menu-toggle { background-color: #4e6456; border-color: #597262; color: #e7f1cd; }
+.color-scheme-green .site-header .site-navigation a:hover, .color-scheme-green .site-header .site-navigation .menu-toggle:hover, .color-scheme-green .site-header .site-navigation .menu-toggle:hover { background-color: #597262; }
+.color-scheme-green #header-image { background-color: #f0f6ea; }
+.color-scheme-green .sidebar { background-color: #f0f6ea; }
+.color-scheme-green #main { background-color: #fefef6; border: none; }
+.color-scheme-green .comments-area article, .color-scheme-green .comments-area .pingback, .color-scheme-green .comments-area .pingback { background-color: #f5f9f1; border-color: #f0f6ea; }
+.color-scheme-green .comments-area .bypostauthor article, .color-scheme-green .comments-area .bypostauthor .pingback { border-color: #bdd7a3; }
+.color-scheme-green .site-footer { background-color: #4e6456; }
+.color-scheme-green .site-footer a, .color-scheme-green .site-footer .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-green .site-footer .menu-toggle { color: #e7f1cd; }
+
+/* Color Sceme: Grey */
+.color-scheme-grey { background-color: #333333; }
+.color-scheme-grey a, .color-scheme-grey .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-grey .menu-toggle { color: #444444; }
+.color-scheme-grey a:visited, .color-scheme-grey .site-header .site-navigation .menu-toggle:visited, .site-header .site-navigation .color-scheme-grey .menu-toggle:visited { color: #4e4e4e; }
+.color-scheme-grey blockquote, .color-scheme-grey pre, .color-scheme-grey th, .color-scheme-grey code, .color-scheme-grey kbd, .color-scheme-grey tt, .color-scheme-grey var, .color-scheme-grey .wp-caption, .color-scheme-grey .entry-attachment, .color-scheme-grey .paging-navigation, .color-scheme-grey .post-navigation, .color-scheme-grey #image-navigation, .color-scheme-grey .page-header { background-color: #f0f0f0; }
+.color-scheme-grey blockquote, .color-scheme-grey table, .color-scheme-grey th, .color-scheme-grey td .wp-caption, .color-scheme-grey .entry-attachment, .color-scheme-grey .wp-caption img, .color-scheme-grey .entry-attachment img, .color-scheme-grey.blog .format-aside, .color-scheme-grey.archive .format-aside, .color-scheme-grey .hentry, .color-scheme-grey .paging-navigation, .color-scheme-grey .post-navigation, .color-scheme-grey #image-navigation, .color-scheme-grey .page-header { border-color: #bbbbbb; }
+.color-scheme-grey .site-header { background-color: #888888; }
+.color-scheme-grey .site-header .site-branding .site-title a, .color-scheme-grey .site-header .site-branding .site-title .site-navigation .menu-toggle, .color-scheme-grey .site-header .site-navigation .site-branding .site-title .menu-toggle { color: #d0d0d0; }
+.color-scheme-grey .site-header .site-navigation a, .color-scheme-grey .site-header .site-navigation .menu-toggle, .color-scheme-grey .site-header .site-navigation .menu-toggle { background-color: #555555; border-color: #626262; color: #eeeeee; }
+.color-scheme-grey .site-header .site-navigation a:hover, .color-scheme-grey .site-header .site-navigation .menu-toggle:hover, .color-scheme-grey .site-header .site-navigation .menu-toggle:hover { background-color: #626262; }
+.color-scheme-grey #header-image { background-color: #f0f0f0; }
+.color-scheme-grey .sidebar { background-color: #f0f0f0; }
+.color-scheme-grey #main { background-color: #fefefe; border: none; }
+.color-scheme-grey .comments-area article, .color-scheme-grey .comments-area .pingback, .color-scheme-grey .comments-area .pingback { background-color: whitesmoke; border-color: #f0f0f0; }
+.color-scheme-grey .comments-area .bypostauthor article, .color-scheme-grey .comments-area .bypostauthor .pingback { border-color: #bdbdbd; }
+.color-scheme-grey .site-footer { background-color: #555555; }
+.color-scheme-grey .site-footer a, .color-scheme-grey .site-footer .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-grey .site-footer .menu-toggle { color: #eeeeee; }
+
+/* Color Sceme: Purple */
+.color-scheme-purple { background-color: #2d2d36; }
+.color-scheme-purple a, .color-scheme-purple .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-purple .menu-toggle { color: #3b366d; }
+.color-scheme-purple a:visited, .color-scheme-purple .site-header .site-navigation .menu-toggle:visited, .site-header .site-navigation .color-scheme-purple .menu-toggle:visited { color: #423d7b; }
+.color-scheme-purple blockquote, .color-scheme-purple pre, .color-scheme-purple th, .color-scheme-purple code, .color-scheme-purple kbd, .color-scheme-purple tt, .color-scheme-purple var, .color-scheme-purple .wp-caption, .color-scheme-purple .entry-attachment, .color-scheme-purple .paging-navigation, .color-scheme-purple .post-navigation, .color-scheme-purple #image-navigation, .color-scheme-purple .page-header { background-color: #eaf6f6; }
+.color-scheme-purple blockquote, .color-scheme-purple table, .color-scheme-purple th, .color-scheme-purple td .wp-caption, .color-scheme-purple .entry-attachment, .color-scheme-purple .wp-caption img, .color-scheme-purple .entry-attachment img, .color-scheme-purple.blog .format-aside, .color-scheme-purple.archive .format-aside, .color-scheme-purple .hentry, .color-scheme-purple .paging-navigation, .color-scheme-purple .post-navigation, .color-scheme-purple #image-navigation, .color-scheme-purple .page-header { border-color: #b7b9c7; }
+.color-scheme-purple .site-header { background-color: #7e819a; }
+.color-scheme-purple .site-header .site-branding .site-title a, .color-scheme-purple .site-header .site-branding .site-title .site-navigation .menu-toggle, .color-scheme-purple .site-header .site-navigation .site-branding .site-title .menu-toggle { color: #d0f0dd; }
+.color-scheme-purple .site-header .site-navigation a, .color-scheme-purple .site-header .site-navigation .menu-toggle, .color-scheme-purple .site-header .site-navigation .menu-toggle { background-color: #4e5064; border-color: #595c72; color: #cdf1ea; }
+.color-scheme-purple .site-header .site-navigation a:hover, .color-scheme-purple .site-header .site-navigation .menu-toggle:hover, .color-scheme-purple .site-header .site-navigation .menu-toggle:hover { background-color: #595c72; }
+.color-scheme-purple #header-image { background-color: #eaf6f6; }
+.color-scheme-purple .sidebar { background-color: #eaf6f6; }
+.color-scheme-purple #main { background-color: #f6fefa; border: none; }
+.color-scheme-purple .comments-area article, .color-scheme-purple .comments-area .pingback, .color-scheme-purple .comments-area .pingback { background-color: #f1f9f9; border-color: #eaf6f6; }
+.color-scheme-purple .comments-area .bypostauthor article, .color-scheme-purple .comments-area .bypostauthor .pingback { border-color: #a3d7d7; }
+.color-scheme-purple .site-footer { background-color: #4e5064; }
+.color-scheme-purple .site-footer a, .color-scheme-purple .site-footer .site-header .site-navigation .menu-toggle, .site-header .site-navigation .color-scheme-purple .site-footer .menu-toggle { color: #cdf1ea; }

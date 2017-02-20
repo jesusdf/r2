@@ -116,10 +116,14 @@ add_action( 'admin_menu', 'f2_theme_options_add_page' );
  */
 function f2_color_scheme_options() {
 	$color_scheme_options = array(
+		'black' => __( 'Black', 'f2' ),
 		'blue' => __( 'Blue', 'f2' ),
 		'brown' => __( 'Brown', 'f2' ),
+		'carbon' => __( 'Carbon', 'f2' ),
+		'dark' => __( 'Dark', 'f2' ),
 		'green' => __( 'Green', 'f2' ),
-		'dark' => __( 'Dark', 'f2' )
+		'grey' => __( 'Grey', 'f2' ),
+		'purple' => __( 'Purple', 'f2' )
 	);
 
 	return apply_filters( 'f2_color_scheme_options', $color_scheme_options );
