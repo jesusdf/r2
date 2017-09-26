@@ -261,4 +261,56 @@ function f2_excerpt_more( $more ) {
 add_filter('excerpt_more', 'f2_excerpt_more');
 endif; /* function f2_excerpt_more */
 
+// Add social media tags
+function child_theme_head_script() { 
+	global $post, $posts;
+	$id=get_the_ID();
+	$post = get_post($id);
+
+	$first_img = '';
+	ob_start();
+	ob_end_clean();
+	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+	$first_img = $matches [1] [0];
+	if(empty($first_img) || $first_img == ''){
+		$first_img = "/wp-content/uploads/2017/02/qr.png";
+	}
+
+	$excerpt = wp_strip_all_tags($post->post_content);
+	$dotpos = mb_strpos($excerpt, '.', 120);
+	if (!$dotpos) {
+		$dotpos = 147;
+		$excerpt = mb_substr($excerpt, 0, $dotpos) . '...';
+	}
+	else 
+	{
+		if($dotpos > 150) {
+			$dotpos = mb_strpos($excerpt, '.', 75);
+		}
+		if($dotpos > 150) {
+                        $dotpos = mb_strpos($excerpt, '.', 0);
+                }
+		$excerpt = mb_substr($excerpt, 0, $dotpos + 1);
+	}
+
+	$permalink = get_permalink( $id, false, false );
+
+?>
+<meta name="description" content="<?php echo($excerpt); ?>" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="<?php the_title(); ?>">
+<meta name="twitter:description" content="<?php echo($excerpt); ?>">
+<meta name="twitter:image" content="<?php echo($first_img); ?>">
+<meta itemprop="name" content="<?php the_title(); ?>">
+<meta itemprop="description" content="<?php echo($excerpt); ?>">
+<meta itemprop="image" content="<?php echo($first_img); ?>">
+<meta property="og:title" content="<?php the_title(); ?>" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="<?php echo($excerpt); ?>" />
+<meta property="og:image" content="<?php echo($first_img); ?>" />
+<meta property="og:url" content="<?php echo($permalink); ?>" />
+<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+<?php }
+add_action( 'wp_head', 'child_theme_head_script' );
+
 ?>
