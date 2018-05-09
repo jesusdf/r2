@@ -313,4 +313,21 @@ function child_theme_head_script() {
 <?php }
 add_action( 'wp_head', 'child_theme_head_script' );
 
+if (!empty($_SERVER['HTTPS'])) {
+  function tweak_headers($headers) {
+	  // https://securityheaders.com/
+	  $headers['Content-Security-Policy'] = 'default-src \'self\' \'unsafe-inline\' https://www.google.com https://s.w.org https://www.gstatic.com;img-src * data:; font-src *;';
+	  $headers['Referrer-Policy'] = 'strict-origin';
+      $headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains';
+	  $headers['X-Content-Type-Options'] = 'nosniff';
+	  $headers['X-Frame-Options'] = 'SAMEORIGIN';
+	  $headers['X-XSS-Protection'] = '1; mode=block';
+	  header_remove("X-Powered-By");
+      return $headers;
+  }
+  
+  add_filter('wp_headers', 'tweak_headers');
+	
+}
+
 ?>
