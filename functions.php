@@ -316,7 +316,7 @@ add_action( 'wp_head', 'child_theme_head_script' );
 if (!empty($_SERVER['HTTPS'])) {
   function tweak_headers($headers) {
 	  // https://securityheaders.com/
-	  $headers['Content-Security-Policy'] = 'default-src \'self\' \'unsafe-inline\' https://www.google.com https://s.w.org https://www.gstatic.com https://cdn.ampproject.org https://fonts.googleapis.com;img-src * data:; font-src *;';
+	  $headers['Content-Security-Policy'] = 'default-src \'self\' \'unsafe-inline\' https://www.google.com https://s.w.org https://www.gstatic.com https://cdn.ampproject.org https://fonts.googleapis.com https://www.youtube.com https://secure.gravatar.com;img-src * data:; font-src *;';
 	  $headers['Referrer-Policy'] = 'strict-origin';
       $headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains';
 	  $headers['X-Content-Type-Options'] = 'nosniff';
