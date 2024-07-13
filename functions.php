@@ -337,6 +337,7 @@ if (!empty($_SERVER['HTTPS'])) {
     }
 
     add_filter('wp_headers', 'tweak_headers');
+	add_action('template_redirect', 'disable_author_pages');
 	
 }
 
